@@ -34,11 +34,5 @@ namespace JustConvert.Models
             else
                 return 0.0;
         }
-        public Currency FindCurrencyByName(string Name)
-        {
-            return (from TheCurrency in CurrencyList
-                    where TheCurrency.Name.Equals(Name)
-                    select TheCurrency).Single();
-        }
     }
 }
