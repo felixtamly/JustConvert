@@ -21,7 +21,6 @@ namespace JustConvert.Controllers
                 ViewData["NewAmount"] = TempData["Amount"];
                 ViewData["NewRate"] = TempData["Rate"];
                 ViewBag.NameSortParm = TempData["NameSortParm"];
-           
             }
             //First request of list: 1 EUR = 
             else
@@ -32,8 +31,8 @@ namespace JustConvert.Controllers
                 TempData["Amount"] = 1;
                 TempData["NewList"] = CurrencyList;
             }
-             TempData.Keep();
-             return View((TempData["NewList"]));
+            TempData.Keep();
+            return View(TempData["NewList"]);
         }
 
         public ActionResult GetSortedList(string SortOrder)
