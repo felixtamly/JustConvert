@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,8 +20,8 @@ namespace JustConvert.Controllers
             {
                 ViewData["NewAmount"] = TempData["Amount"];
                 ViewData["NewRate"] = TempData["Rate"];
-                TempData.Keep();
-                return View((TempData["NewList"]));
+                ViewBag.NameSortParm = TempData["NameSortParm"];
+           
             }
             //First request of list: 1 EUR = 
             else
@@ -28,8 +29,30 @@ namespace JustConvert.Controllers
                 ViewData["NewAmount"] = 1;
                 ViewData["NewRate"] = "EUR";
                 TempData["Rate"] = "EUR";
-                return View(CurrencyList);
+                TempData["Amount"] = 1;
+                TempData["NewList"] = CurrencyList;
             }
+             TempData.Keep();
+             return View((TempData["NewList"]));
+        }
+
+        public ActionResult GetSortedList(string SortOrder)
+        {
+            var UnsortedList = (List<Currency>)TempData["NewList"];
+            TempData["NameSortParm"] = String.IsNullOrEmpty(SortOrder) ? "name_desc" : "";
+            var SortedList = from c in UnsortedList
+                           select c;
+            switch(SortOrder)
+            {
+                case "name_desc":
+                    SortedList = SortedList.OrderBy(c => c.Name);
+                    break;
+                default:
+                    SortedList = SortedList.OrderByDescending(c => c.Name);
+                    break;
+            }
+            TempData["NewList"] = SortedList.ToList();
+            return RedirectToAction("Index", "Currencies");
         }
 
         public ActionResult GetNewList(string Name)

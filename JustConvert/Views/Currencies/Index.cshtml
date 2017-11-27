@@ -21,11 +21,11 @@
 <div class="form-group">
 </div>
 <br>
-<table class="table table-bordered">
+<table class="table table-bordered" id="myConverter">
 <thead>
 <tr><input class="form-control" id="myInput" type="text" placeholder="Type currency to filter..."></tr>
 <tr>
-<th style="width: 50%; text-align:center; font-weight:bold">Currency</th>
+<th style="width: 50%; text-align:center; font-weight:bold">@Html.ActionLink("Currency", "GetSortedList", new { SortOrder = ViewBag.NameSortParm })</th>
 <th style="width: 50%; text-align:center; font-weight:bold">@ViewData["NewAmount"] @ViewData["NewRate"] =</th>
 </tr>
 </thead>
