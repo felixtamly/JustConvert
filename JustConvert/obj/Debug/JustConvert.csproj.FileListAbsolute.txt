@@ -17,3 +17,7 @@
 /Users/felixtamly/Projects/JustConvert/JustConvert/obj/Debug/JustConvert.csproj.CoreCompileInputs.cache
 /Users/felixtamly/Projects/JustConvert/JustConvert/obj/Debug/JustConvert.dll
 /Users/felixtamly/Projects/JustConvert/JustConvert/obj/Debug/JustConvert.pdb
+/Users/felixtamly/Projects/JustConvert/JustConvert/bin/PagedList.dll
+/Users/felixtamly/Projects/JustConvert/JustConvert/bin/PagedList.Mvc.dll
+/Users/felixtamly/Projects/JustConvert/JustConvert/bin/PagedList.xml
+/Users/felixtamly/Projects/JustConvert/JustConvert/bin/PagedList.Mvc.xml

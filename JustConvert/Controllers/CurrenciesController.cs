@@ -91,12 +91,8 @@ namespace JustConvert.Controllers
             {
                 OriginalList = CurrencyList;
             }
-            //Multiply the table by the desired amount. 
-            foreach (Currency Currency in OriginalList)
-            {
-                Currency.Rate *= Amount;
-                ConvertedList.Add(Currency);
-            }
+            //Multiply the table by the desired amount.
+            ConvertedList = ListConverter.Multiply(Amount, OriginalList);
             TempData["NewList"] = ConvertedList; //To bind the list on Index().
             TempData["Amount"] = Amount;
 

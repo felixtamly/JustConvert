@@ -21,5 +21,15 @@ namespace JustConvert.Models
             }
             return ConvertedList;
         }
+        public List<Currency> Multiply(double Amount, List<Currency> OriginalList)
+        {
+            List<Currency> MultipliedList = new List<Currency>();
+            foreach(Currency c in OriginalList)
+            {
+                c.Rate *= Amount;
+                MultipliedList.Add(c);
+            }
+            return MultipliedList;
+        }
     }
 }
