@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{601BFE65-5537-4EF9-8718-C239C066098A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="JustConvert/Views/Shared/_Layout.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="JustConvert/Controllers/CurrenciesController.cs">
     <Files>
       <File FileName="JustConvert/Controllers/HomeController.cs" Line="12" Column="32" />
       <File FileName="JustConvert/Models/XmlToCurrencyListConverter.cs" Line="3" Column="19" />
-      <File FileName="JustConvert/Models/RateFinder.cs" Line="27" Column="10" />
-      <File FileName="JustConvert/Models/Converter.cs" Line="16" Column="34" />
-      <File FileName="JustConvert/Models/ListConverter.cs" Line="15" Column="42" />
-      <File FileName="JustConvert/Controllers/CurrenciesController.cs" Line="75" Column="10" />
+      <File FileName="JustConvert/Models/RateFinder.cs" Line="36" Column="10" />
+      <File FileName="JustConvert/Models/Converter.cs" Line="18" Column="37" />
+      <File FileName="JustConvert/Models/ListConverter.cs" Line="13" Column="37" />
+      <File FileName="JustConvert/Controllers/CurrenciesController.cs" Line="65" Column="45" />
       <File FileName="JustConvert/Views/Currencies/Index.cshtml" Line="10" Column="5" />
-      <File FileName="JustConvert/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="JustConvert/Views/Shared/_Layout.cshtml" Line="23" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
